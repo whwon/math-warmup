@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Math Warmup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo"></div>
+      <p id="stopWatch"></p>
+    </header>
+    <main>
+      <div class="content">
+        <div id="welcome" class="welcome">
+          <h1>Welcome to Math Warmup!</h1>
+          <p>
+            This will challenge you to solve as many problems as possible in 1 minute (60 seconds). You can choose your
+            level below.
+          </p>
+          <form onsubmit="getReadyCountDown(event)">
+            <select>
+              <option value="+">Addition</option>
+              <option value="-">Subtraction</option>
+              <option value="*">Multiplication</option>
+              <option value="/">Division</option>
+            </select>
+            <select>
+              <option value="1">Easy</option>
+              <option value="2">Medium</option>
+              <option value="3">Hard</option>
+            </select>
+            <button type="submit">Start</button>
+          </form>
+        </div>
+
+        <div class="ready-count">Starts In...</div>
+
+        <div class="main">
+          <div id="operation" class="operation">
+            <h4 id="firstNumber" class="first"></h4>
+            <h4 class="operator">+</h4>
+            <h4 id="secondNumber" class="second"></h4>
+          </div>
+          <input id="answer" class="answer" type="number" autofocus />
+        </div>
+      </div>
+    </main>
+
+    <div id="scoreboard-modal" class="modal">
+      <div class="modal-content">
+        <h2>Scoreboard</h2>
+        <p>Here's the final scoreboard:</p>
+        <h6 id="score"></h6>
+        <h4 id="percent"></h4>
+        <button id="reset" onclick="resetGame()">Reset</button>
+      </div>
+    </div>
+  </body>
+</html>
